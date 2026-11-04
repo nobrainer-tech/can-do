@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fable System Prompt"
+  short_description: "Zasady Fable 5.1, źródła i porównanie z Codexem"
+  default_prompt: "Użyj $fable-system-prompt, aby wykonać bieżące zadanie w pełnym zakresie i potwierdzić wynik."
