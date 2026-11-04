@@ -96,6 +96,64 @@ it is not a universal model specification and was not imported.
 - **Domain policies:** the host supplies its safety and specialist policies.
   This operating guide does not transplant or weaken another vendor's policy.
 
+## Language rewrite and measured length
+
+The 2026-11-04 language revision uses short commands, consistent terms and
+conditions next to the actions they restrict. It is inspired by
+[ASD-STE100 Simplified Technical English](https://www.asd-ste100.org/about_STE.html).
+The [official FAQ](https://www.asd-ste100.org/STE_faq.html) describes a controlled
+language with writing rules and a dictionary. This revision has not undergone
+a complete dictionary check or formal conformity review. Sentence length alone
+does not establish ASD-STE100 compliance.
+
+The baseline is [the previous complete guide at `86ef535`][language-baseline].
+Both measurements exclude YAML frontmatter and trim outer whitespace. A word
+is one whitespace-separated unit. Character counts include Markdown and line
+breaks. These are text measurements, not model-token or runtime-cost measurements.
+
+| Guide metric | Before | After |
+|---|---:|---:|
+| Body words | 3,559 | 2,742 |
+| Body characters | 23,887 | 19,280 |
+| Mean words per prose sentence | 12.61 | 8.45 |
+| Longest prose sentence, words | 32 | 19 |
+| Prose sentences over 20 words | 21 | 0 |
+
+The body is **22.96% shorter by word count** and **19.29% shorter by character
+count**. Sentence measurements remove headings, list markers and link URLs,
+join wrapped lines, and split at sentence-ending punctuation or list-item
+boundaries. This heuristic is not the official STE word-count algorithm.
+
+A section-by-section meaning review retained the 16 areas of responsibility,
+the final completion check, permissions, conditions and exceptions. Two first-draft
+changes were corrected: materially different commitments must remain distinct
+from trivial choices, and task-appropriate fixtures need not be explicitly
+requested by the user. The revised text was also checked against the original
+16 decision scenarios. This was a semantic review in the main agent, not an
+independent or cross-model execution benchmark.
+
+### Comparison with the inspected source prompts
+
+| Text surface | Whitespace-separated words |
+|---|---:|
+| Current Can-Do Prompt body | 2,742 |
+| Fable Code main block, lines 1-156 before `Session context` | 2,948 |
+| Claimed Mythos Code main block, from `# System prompt` to before `# First user turn` | 2,261 |
+| [Mirror of the official Fable chat core, 2026-10-30][fable-core-mirror] | 4,882 |
+| Entire inspected Fable Code file | 72,503 |
+| Entire inspected Mythos Code file | 15,947 |
+
+The current guide is about 7.0% shorter than that Fable Code block and 21.3%
+longer than that Mythos Code block. The blocks have different purposes and
+boundaries. Full files include tool schemas and session material. These counts
+do not establish equal coverage, authenticated Mythos provenance or equivalent
+model behavior. The guide is an original adaptation with authored extensions,
+not a section-for-section reproduction of an entire vendor prompt.
+
+Editorial finding: the revised instructions express actions and conditions
+more directly. Better task accuracy, completion rate, safety or cost requires
+separate behavioral evidence and is not established by shorter text.
+
 ## Updating and checking this skill
 
 1. Check official publications and the relevant public repository history.
@@ -136,3 +194,5 @@ improvement in completion rate, quality, cost or question frequency.
 [task-tracking]: https://github.com/Piebald-AI/claude-code-system-prompts/blob/69478d05aafd3f31ddc67308c55fa4d9178b4000/system-prompts/system-prompt-tool-usage-task-management.md
 [piebald]: https://github.com/Piebald-AI/claude-code-system-prompts/tree/69478d05aafd3f31ddc67308c55fa4d9178b4000
 [mythos-readme]: https://github.com/jungjin0003/Claude-Mythos-5.1-System-Prompt/blob/58d7f598bda30f7853ef1bab798890a562e0915e/README.md
+[language-baseline]: https://github.com/nobrainer-tech/can-do-prompt/blob/86ef5354ab239fad5579415cbfe5348ee7ef3e61/SKILL.md
+[fable-core-mirror]: https://github.com/asgeirtj/system_prompts_leaks/blob/bb7bbddf377c8d82c56f533134c6b93f13d245ae/Anthropic/official/2026-10-30-claude-fable-5.1.md
