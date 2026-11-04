@@ -194,5 +194,5 @@ improvement in completion rate, quality, cost or question frequency.
 [task-tracking]: https://github.com/Piebald-AI/claude-code-system-prompts/blob/69478d05aafd3f31ddc67308c55fa4d9178b4000/system-prompts/system-prompt-tool-usage-task-management.md
 [piebald]: https://github.com/Piebald-AI/claude-code-system-prompts/tree/69478d05aafd3f31ddc67308c55fa4d9178b4000
 [mythos-readme]: https://github.com/jungjin0003/Claude-Mythos-5.1-System-Prompt/blob/58d7f598bda30f7853ef1bab798890a562e0915e/README.md
-[language-baseline]: https://github.com/nobrainer-tech/can-do-prompt/blob/86ef5354ab239fad5579415cbfe5348ee7ef3e61/SKILL.md
+[language-baseline]: https://github.com/nobrainer-tech/can-do/blob/86ef5354ab239fad5579415cbfe5348ee7ef3e61/SKILL.md
 [fable-core-mirror]: https://github.com/asgeirtj/system_prompts_leaks/blob/bb7bbddf377c8d82c56f533134c6b93f13d245ae/Anthropic/official/2026-10-30-claude-fable-5.1.md
