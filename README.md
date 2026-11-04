@@ -21,8 +21,8 @@ It tells the agent to complete the requested work, make routine decisions,
 recover from failures and verify the result. Your scope, permissions and
 required approvals remain in force.
 
-The guide lives in [`SKILL.md`](SKILL.md). Its technical skill name remains
-`can-do-prompt`.
+The guide lives in [`SKILL.md`](SKILL.md). Its skill name is
+`can-do`.
 
 ## For best results, use the full NoBrainer Tech Flow
 
@@ -59,7 +59,7 @@ tools and the host's rules determine what can actually run.
 
 1. Open [`SKILL.md`](SKILL.md) and review the instructions.
 2. Make the file available to your agent. If your client supports Agent Skills,
-   install the repository as the `can-do-prompt` skill using that client's supported method.
+   install the repository as the `can-do` skill using that client's supported method.
    Keep `references/` beside `SKILL.md`.
 3. Ask the agent to use the guide, then describe the task and its finish condition.
 
